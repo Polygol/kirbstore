@@ -123,7 +123,7 @@
             width: 100%;
             background-color: var(--accent);
             color: var(--background-color);
-            border: 1px solid var(--text-color);
+            border: 1px solid var(--glass-border);
             border-radius: 25px;
             padding: 10px 15px;
             cursor: pointer;
@@ -175,12 +175,11 @@
             font-size: 18px;
         }
         
-        /* Add this new rule to your <style> block */
         .uninstall-btn {
             flex-grow: 1;
             width: 100%;
             background-color: transparent;
-            color: #ff453a; /* A standard 'destructive action' red */
+            color: var(--secondary-text-color);
             border: 1px solid var(--glass-border);
             border-radius: 25px;
             padding: 10px 15px;
@@ -196,7 +195,7 @@
         }
 
         .uninstall-btn .material-symbols-rounded {
-            color: #ff453a; /* A standard 'destructive action' red */
+            color: var(--secondary-text-color);
             font-size: 18px;
         }
 
@@ -526,18 +525,18 @@
                 buttonHtml += `<div class="app-actions">`;
                 if (hasUpdate) {
                     buttonHtml += `<button class="update-btn" data-id="${app.id}">
-                                       <span class="material-symbols-rounded">update</span>
+                                       <span class="material-symbols-rounded">cloud_download</span>
                                        Update
                                    </button>`;
                 }
                 buttonHtml += `<button class="uninstall-btn" data-name="${app.name}">
-                                   <span class="material-symbols-rounded">delete</span>
+                                   <span class="material-symbols-rounded">cancel</span>
                                    Uninstall
                                </button>`;
                 buttonHtml += `</div>`;
             } else {
                 buttonHtml = `<button class="install-btn" data-id="${app.id}">
-                               <span class="material-symbols-rounded">download</span>
+                               <span class="material-symbols-rounded">arrow_circle_down</span>
                                Install
                            </button>`;
             }
