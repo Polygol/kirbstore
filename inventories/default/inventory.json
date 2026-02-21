@@ -143,7 +143,7 @@
             "category": "Community",
             "iconUrl": "/kirbstore/inventories/default/appicon/messages.png",
             "url": "/messages/index.html",
-            "filesToCache": ["/messages/index.html", "/kirbstore/inventories/default/appicon/messages.png", "/assets/gurapp/api/gurasuraisu-api.js", "https://cdn.jsdelivr.net/npm/trystero@0.13.0/dist/trystero-torrent.min.js"]
+            "filesToCache": ["/messages/index.html", "/kirbstore/inventories/default/appicon/messages.png", "/assets/gurapp/api/gurasuraisu-api.js", "https://esm.sh/trystero@0.15.1/torrent"]
         }
     ]
 }
