@@ -137,13 +137,13 @@
             "filesToCache": ["/livespace/index.html", "/kirbstore/inventories/default/appicon/livespace.png", "/assets/gurapp/api/gurasuraisu-api.js", "/livespace/fabric.min.js", "https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.4/dexie.min.js"]
         },
         {
-            "id": "messages_stub",
+            "id": "messages",
             "name": "Messages",
             "developer": "kirbIndustries",
             "category": "Community",
             "iconUrl": "/kirbstore/inventories/default/appicon/messages.png",
-            "url": "https://kirbindustries.gitbook.io/polygol/messages-for-polygol",
-            "filesToCache": ["/kirbstore/inventories/default/appicon/messages.png"]
+            "url": "/messages/index.html",
+            "filesToCache": ["/messages/index.html", "/kirbstore/inventories/default/appicon/messages.png", "/assets/gurapp/api/gurasuraisu-api.js", "https://cdn.jsdelivr.net/npm/trystero@0.13.0/dist/trystero-torrent.min.js"]
         }
     ]
 }
