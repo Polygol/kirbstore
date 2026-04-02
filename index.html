@@ -827,7 +827,7 @@
             `;
             
             const installedApps = appStoreInventory.filter(a => installedAppsInfo[a.name]);
-            html += installedApps.length > 0 ? installedApps.map(a => createAppCard(a)).join('') : `<div class="no-apps-message" style="grid-column: 1/-1;">No apps installed yet.</div>`;
+            html += installedApps.length > 0 ? installedApps.map(a => createAppCard(a)).join('') : `<div class="no-apps-message" style="grid-column: 1/-1;">No apps installed</div>`;
             html += `</div>`;
             container.innerHTML = html;
             
