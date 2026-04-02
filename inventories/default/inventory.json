@@ -6,8 +6,15 @@
             "name": "Chronos",
             "developer": "kirbIndustries",
             "category": "Tools",
+            "description": "Clock application with alarms, timers, stopwatch and world clock",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/alarm.png",
             "url": "https://polygol.github.io/chronos/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/alarm1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/alarm2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/alarm3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/chronos/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/alarm.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://www.gstatic.com/delight/funbox/timer_utilitarian_v2.mp3", "https://momentjs.com/downloads/moment.min.js", "https://momentjs.com/downloads/moment-timezone-with-data.min.js"]
         },
         {
@@ -15,8 +22,12 @@
             "name": "Ailuator",
             "developer": "kirbIndustries",
             "category": "Tools",
+            "description": "Calculator application",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/calculator.png",
             "url": "https://polygol.github.io/ailuator/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/calculator1.png"],
             "filesToCache": ["https://polygol.github.io/ailuator/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/calculator.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -24,8 +35,15 @@
             "name": "Wordy",
             "developer": "kirbIndustries",
             "category": "Tools",
+            "description": "Document writing application",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/docs.png",
             "url": "https://polygol.github.io/wordy/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/docs1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/docs2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/docs3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/wordy/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/docs.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -33,8 +51,15 @@
             "name": "Fantaskical",
             "developer": "kirbIndustries",
             "category": "Tools",
+            "description": "Stay on top of your schedule with Fantaskical. Add tasks to do, and mark important dates.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/tasks.png",
             "url": "https://polygol.github.io/fantaskical/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/tasks1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/tasks2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/tasks3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/fantaskical/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/tasks.png", "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -42,8 +67,14 @@
             "name": "Moments",
             "developer": "kirbIndustries",
             "category": "Entertainment",
+            "description": "Relive your favorite memories. Use Moments to see photos captured by Polygol Camera.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/photos.png",
             "url": "https://polygol.github.io/moments/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/photos1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/photos2.png"
+            ],
             "filesToCache": ["https://polygol.github.io/moments/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/photos.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -51,8 +82,15 @@
             "name": "Music",
             "developer": "kirbIndustries",
             "category": "Entertainment",
+            "description": "The local music player for Polygol. Music uses your local music library and provides a listening experience with support for Polygol Waves.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/music.png",
             "url": "https://polygol.github.io/music/index.html",
+            "privacy": "Audio files are processed locally. If enabled, external services will connect to the internet to retrieve information, but no personal data is shared.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/music1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/music2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/music3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/music/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/music.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"]
         },
         {
@@ -60,8 +98,15 @@
             "name": "Streams",
             "developer": "Streams Music Team, sachinsenal0x64",
             "category": "Entertainment",
+            "description": "Play your songs 🎶🎼🎧 Streams (Music)",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/streams.png",
             "url": "https://streamsmusic.github.io/polygol.html",
+            "privacy": "Uses an online library. No personal data will be collected.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/streams1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/streams2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/streams3.png"
+            ],
             "filesToCache": ["https://streamsmusic.github.io/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/streams.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"]
         },
         {
@@ -69,8 +114,14 @@
             "name": "Clapper",
             "developer": "kirbIndustries",
             "category": "Entertainment",
+            "description": "The video player for Polygol.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/video.png",
             "url": "https://polygol.github.io/clapper/index.html",
+            "privacy": "Video files are processed locally. If enabled, external services will connect to the internet to retrieve information, but no personal data is shared.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/video1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/video2.png"
+            ],
             "filesToCache": ["https://polygol.github.io/clapper/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/video.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -78,8 +129,13 @@
             "name": "SketchPad",
             "developer": "kirbIndustries",
             "category": "Tools",
+            "description": "Basic drawing application",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/sketch.png",
             "url": "https://polygol.github.io/sketchpad/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/sketch1.png"
+            ],
             "filesToCache": ["https://polygol.github.io/sketchpad/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/sketch.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -87,8 +143,15 @@
             "name": "Invitations",
             "developer": "kirbIndustries",
             "category": "Community",
+            "description": "Let's invite someone! With Invitations, make invites quick and easy, and print or share them around",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/mail.png",
             "url": "https://polygol.github.io/invitations/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/mail1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/mail2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/mail3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/invitations/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/mail.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -96,8 +159,15 @@
             "name": "Weather",
             "developer": "kirbIndustries, OpenMeteo",
             "category": "Tools",
+            "description": "See what's weather like in multiple places",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/weather.png",
             "url": "https://polygol.github.io/weather/index.html",
+            "privacy": "Weather uses your location to provide forecasts. Location data is only used for weather purposes. Uses OpenMeteo API",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/weather1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/weather2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/weather3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/weather/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/weather.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -105,8 +175,15 @@
             "name": "Camera",
             "developer": "kirbIndustries",
             "category": "Entertainment",
+            "description": "Easy camera application",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/camera.png",
             "url": "https://polygol.github.io/camera/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/camera1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/camera2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/camera3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/camera/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/camera.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -114,8 +191,15 @@
             "name": "Terminal",
             "developer": "kirbIndustries",
             "category": "Other",
+            "description": "Manage your Polygol",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/terminal.png",
             "url": "https://polygol.github.io/terminal/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/terminal1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/terminal2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/terminal3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/terminal/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/terminal.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -123,8 +207,15 @@
             "name": "Widgizier",
             "developer": "Funizier",
             "category": "Other",
+            "description": "Funizier suite - fun customizer tools for you! ❤️⚡☁️ Create widgets - easily with Widgizer 🪟☺️✅",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/widgizier.png",
             "url": "https://funizier.github.io/widgizier",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/widgizier1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/widgizier2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/widgizier3.png"
+            ],
             "filesToCache": ["https://funizier.github.io/widgizier", "https://polygol.github.io/kirbstore/inventories/default/appicon/widgizier.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
         },
         {
@@ -132,8 +223,15 @@
             "name": "Livespace",
             "developer": "kirbIndustries",
             "category": "Tools",
+            "description": "Your infinite digital brainstorming team. Write down notes, drawings and diagrams on an infinite canvas.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/livespace.png",
             "url": "https://polygol.github.io/livespace/index.html",
+            "privacy": "This app does not send nor recieve any data.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/livespace1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/livespace2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/livespace3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/livespace/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/livespace.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://polygol.github.io/livespace/fabric.min.js", "https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.4/dexie.min.js"]
         },
         {
@@ -141,8 +239,15 @@
             "name": "Messages",
             "developer": "kirbIndustries",
             "category": "Community",
+            "description": "Secure, private communication. Chat with other Polygol users, or others.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/messages.png",
             "url": "https://polygol.github.io/messages/index.html",
+            "privacy": "End-to-end encrypted communication. Data may be shared when connecting to a group.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/messages1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/messages2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/messages3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/messages/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/messages.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://esm.sh/trystero@0.15.1/torrent"]
         },
         {
@@ -150,8 +255,15 @@
             "name": "Hearmience",
             "developer": "kirbIndustries",
             "category": "Tools",
+            "description": "Focus or relax with high-quality ambient sounds. Hearmience provides the soundscape for any task.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/hearmience.png",
             "url": "https://polygol.github.io/hearmience/index.html",
+            "privacy": "Audio assets are streamed from Google. No user audio is recorded or stored.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/hearmience1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/hearmience2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/hearmience3.png"
+            ],
             "filesToCache":["https://polygol.github.io/hearmience/index.html","https://polygol.github.io/kirbstore/inventories/default/appicon/hearmience.png","https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js","https://polygol.github.io/hearmience/activity.html","https://actions.google.com/sounds/v1/ambiences/ambient_hum_air_conditioner.ogg","https://actions.google.com/sounds/v1/ambiences/children_group_ambience.ogg","https://actions.google.com/sounds/v1/ambiences/coffee_shop.ogg","https://actions.google.com/sounds/v1/ambiences/dmv_background_noise.ogg","https://actions.google.com/sounds/v1/ambiences/laundromat_sounds.ogg","https://actions.google.com/sounds/v1/ambiences/retail_background_noises.ogg","https://actions.google.com/sounds/v1/ambiences/subway_station_nyc.ogg","https://actions.google.com/sounds/v1/weather/long_silence_at_top.ogg","https://actions.google.com/sounds/v1/ambiences/barnyard_with_animals.ogg","https://actions.google.com/sounds/v1/ambiences/inside_barn_with_chickens.ogg","https://actions.google.com/sounds/v1/ambiences/morning_farm.ogg","https://actions.google.com/sounds/v1/ambiences/outdoor_farm_sounds.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_afternoon.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_late_night.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_morning.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_night.ogg","https://actions.google.com/sounds/v1/ambiences/spring_day_forest.ogg","https://actions.google.com/sounds/v1/ambiences/summer_forest.ogg","https://actions.google.com/sounds/v1/weather/leaves_russle_on_tree.ogg","https://actions.google.com/sounds/v1/ambiences/arcade_room.ogg","https://actions.google.com/sounds/v1/ambiences/factory_background.ogg","https://actions.google.com/sounds/v1/ambiences/factory_manufacture_background.ogg","https://actions.google.com/sounds/v1/ambiences/factory_morning_start_up.ogg","https://actions.google.com/sounds/v1/ambiences/factory_sounds.ogg","https://actions.google.com/sounds/v1/ambiences/distant_highway.ogg","https://actions.google.com/sounds/v1/ambiences/highway_near_waterfront.ogg","https://actions.google.com/sounds/v1/ambiences/morning_highway_in_distance.ogg","https://actions.google.com/sounds/v1/weather/windy_weather_driving.ogg","https://actions.google.com/sounds/v1/ambiences/truck_beeping.ogg","https://actions.google.com/sounds/v1/weather/ice_or_rain.ogg","https://actions.google.com/sounds/v1/weather/light_rain.ogg","https://actions.google.com/sounds/v1/weather/rain_heavy_loud.ogg","https://actions.google.com/sounds/v1/weather/rain_heavy_quiet_interior.ogg","https://actions.google.com/sounds/v1/weather/rain_on_roof.ogg","https://actions.google.com/sounds/v1/weather/rain_on_rooftop.ogg","https://actions.google.com/sounds/v1/weather/rain_water_dripping_fast_hard.ogg","https://actions.google.com/sounds/v1/weather/rain_water_dripping_softly.ogg","https://actions.google.com/sounds/v1/weather/rain_on_car_heavy.ogg","https://actions.google.com/sounds/v1/weather/afternoon_storm_long.ogg","https://actions.google.com/sounds/v1/weather/distant_thunder.ogg","https://actions.google.com/sounds/v1/weather/low_thunder_rolls.ogg","https://actions.google.com/sounds/v1/weather/rolling_thunder.ogg","https://actions.google.com/sounds/v1/weather/summer_thunder_and_rain.ogg","https://actions.google.com/sounds/v1/weather/thunder_crack.ogg","https://actions.google.com/sounds/v1/weather/thunderstorm.ogg","https://actions.google.com/sounds/v1/weather/thunderstorm_long.ogg","https://actions.google.com/sounds/v1/weather/desert_howling_wind.ogg","https://actions.google.com/sounds/v1/weather/strong_wind.ogg","https://actions.google.com/sounds/v1/weather/wind.ogg"]
         },
         {
@@ -159,8 +271,15 @@
             "name": "Wellbeing",
             "developer": "kirbIndustries",
             "category": "Tools",
+            "description": "Be mindful, work out with helpful AI tools",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/wellbeing.png",
             "url": "https://polygol.github.io/wellbeing/index.html",
+            "privacy": "Activity workout detection is performed entirely on device. Your personal data is not sent to any connectivity services.",
+            "screenshots": [
+                "https://polygol.github.io/kirbstore/inventories/default/preview/wellbeing1.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/wellbeing2.png",
+                "https://polygol.github.io/kirbstore/inventories/default/preview/wellbeing3.png"
+            ],
             "filesToCache": ["https://polygol.github.io/wellbeing/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/wellbeing.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js", "https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js", "https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"]
         }
     ]

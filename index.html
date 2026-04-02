@@ -29,30 +29,10 @@
             color: var(--text-color);
             transition: background-color 0.3s, color 0.3s;
             user-select: none;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
         }
         
-        .search-input {
-            margin-right: 6px;
-            background-color: var(--transparent-color);
-            border-radius: 25px;
-            color: var(--text-color);
-            padding: 0 16px;
-            display: flex;
-            align-items: center;
-            box-shadow: var(--sun-shadow);
-            border: 1px solid var(--glass-border);
-            outline: none;
-            font-family: 'Inter', sans-serif;
-            min-width: 150px;
-            max-width: 250px;
-        }
-
-        .search-input::placeholder {
-            color: var(--secondary-text-color);
-        }
-
         .content {
             width: 100%;
             max-width: 1200px;
@@ -67,21 +47,23 @@
         .app-card {
             background-color: var(--search-background);
             border: 1px solid var(--glass-border);
-            border-radius: 35px;
+            border-radius: 50px;
             corner-shape: superellipse(1.5);
-            padding: 15px;
+            padding: 10px;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             gap: 12px;
             backdrop-filter: var(--edge-refraction-filter) saturate(2) blur(2.5px);
             box-shadow: var(--sun-shadow);
+            cursor: pointer;
         }
 
         .app-header {
             display: flex;
             align-items: center;
             gap: 15px;
+            margin-left: 4px;
         }
 
         .app-icon {
@@ -327,11 +309,116 @@
             width: 100%
         }
 
-        @media (max-width: 860px) {
-            .search-input {
-                max-width: 77px;
-                min-width: 77px;
-            }
+        .main-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .section-title {
+            font-family: 'Open Runde', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .hero-card {
+            background-color: var(--search-background);
+            border-radius: 50px;
+            corner-shape: superellipse(1.5);
+            padding: 30px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            color: white;
+            box-shadow: var(--sun-shadow);
+            border: 1px solid var(--glass-border);
+        }
+        .hero-card img {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.7);
+        }
+        .hero-card .content-z {
+            position: relative; z-index: 1; display: flex; flex-direction: column; gap: 5px;
+        }
+        .hero-tag { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: rgba(255,255,255,0.8); }
+        .hero-title { font-size: 32px; font-family: 'Open Runde'; font-weight: 700; }
+        .hero-subtitle { font-size: 16px; color: rgba(255,255,255,0.9); }
+
+        .horizontal-scroll {
+            display: flex; gap: 15px; overflow-x: auto; scroll-snap-type: x mandatory; margin-bottom: 20px; border-radius: 50px; corner-shape: superellipse(1.5);
+        }
+        .horizontal-scroll::-webkit-scrollbar { display: none; }
+        .featured-small-card {
+            width: 100%;
+            min-width: 250px;
+            background: var(--search-background);
+            border-radius: 35px; corner-shape: superellipse(1.5);
+            padding: 10px 12px;
+            display: flex; flex-direction: column; gap: 10px;
+            scroll-snap-align: start; cursor: pointer;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--sun-shadow);
+        }
+        .category-filter {
+            overflow-x: auto;
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+        }
+        .category-filter::-webkit-scrollbar { display: none; }
+        .category-btn {
+            background-color: var(--search-background);
+            color: var(--text-color);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: var(--sun-shadow);
+        }
+        .category-btn.active {
+            background-color: var(--accent);
+            color: var(--background-color);
+            border-radius: 25px !important;
+        }
+
+        .search-container {
+            position: relative;
+            flex-grow: 1;
+            min-width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary-text-color);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .material-symbols-rounded.search-icon {
+            font-size: 20px;
+        }
+
+        .library-search-input {
+            width: 100%;
+            border-radius: 25px;
+            border: 1px solid var(--glass-border);
+            background: var(--search-background);
+            color: var(--text-color);
+            outline: none;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            backdrop-filter: var(--edge-refraction-filter) saturate(2) blur(2.5px);
+            box-shadow: var(--sun-shadow), 0 0 15px rgba(0, 0, 0, 0.05);
+            padding: 12px 17px 12px 42px;"
         }
 
         @media (max-width: 480px) {
@@ -344,34 +431,29 @@
 <body data-app-name="KIRBSTORE">
     <div class="content">
         <div class="toolbar">
-            <input type="text" class="search-input" placeholder="Search">
-            <button class="tab-btn active" data-category="All">
+            <button class="tab-btn active" data-tab="home">
                 <span class="material-symbols-rounded">home</span>
                 Home
             </button>
-            <button class="tab-btn" data-category="Tools">
-                <span class="material-symbols-rounded">automation</span>
-                Tools
+            <button class="tab-btn" data-tab="today">
+                <span class="material-symbols-rounded">today</span>
+                Today
             </button>
-            <button class="tab-btn" data-category="Community">
-                <span class="material-symbols-rounded">group</span>
-                Social
+            <button class="tab-btn" data-tab="apps">
+                <span class="material-symbols-rounded">newsstand</span>
+                Library
             </button>
-            <button class="tab-btn" data-category="Entertainment">
-                <span class="material-symbols-rounded">attractions</span>
-                Play
+            <button class="tab-btn" data-tab="you">
+                <span class="material-symbols-rounded">account_circle</span>
+                You
             </button>
-            <button class="tab-btn" data-category="Other">
-                <span class="material-symbols-rounded">category</span>
-                Other
-            </button>
-            <button class="tab-btn" id="addStoreBtn">
-                <span class="material-symbols-rounded">add</span>
-                Add Store
+            <button class="tab-btn" data-tab="search">
+                <span class="material-symbols-rounded">search</span>
+                Search
             </button>
         </div>
 
-        <div class="app-grid" id="appGrid">
+        <div id="mainContent" class="main-content">
             <!-- Apps will be dynamically added here -->
         </div>
     </div>
@@ -392,21 +474,21 @@
     </div>
 
     <script>
-        const appGrid = document.getElementById('appGrid');
-        const searchInput = document.querySelector('.search-input');
-        const categoryBtns = document.querySelectorAll('.tab-btn[data-category]');
-        const addStoreBtn = document.getElementById('addStoreBtn');
+        const mainContent = document.getElementById('mainContent');
+        const tabs = document.querySelectorAll('.tab-btn[data-tab]');
         const addStoreModal = document.getElementById('addStoreModal');
         const submitStore = document.getElementById('submitStore');
         const storeUrlInput = document.getElementById('storeUrlInput');
     
-        let appStoreInventory = [];
+        let appStoreInventory =[];
         let installedAppsInfo = {};
         let currentCategory = 'All';
+        let currentTab = 'home';
+        let recommendations = { homeFeatured: [], editorsPicks: [], stories:[] };
     
         let storeSources = JSON.parse(localStorage.getItem('appStoreSources')) || [
-            "/kirbstore/inventories/default/inventory.json",
-            "/glucose-gurapps/inventory.json"
+            "https://polygol.github.io/inventories/default/inventory.json",
+            "https://polygol.github.io/glucose-gurapps/inventory.json"
         ];
 
         function shuffleArray(array) {
@@ -417,10 +499,6 @@
         }
 
         // Modal functionality
-        addStoreBtn.addEventListener('click', () => {
-            addStoreModal.classList.add('show');
-        });
-
         addStoreModal.addEventListener('click', (e) => {
             if (e.target === addStoreModal) {
                 addStoreModal.classList.remove('show');
@@ -466,8 +544,56 @@
             }
         }
     
+        function stringToColor(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                hash = str.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            const h = Math.abs(hash) % 360;
+            return `hsl(${h}, 70%, 40%)`;
+        }
+
+        async function loadRecommendations() {
+            try {
+                const res = await fetch('https://raw.githubusercontent.com/kirbIndustries/assets/refs/heads/main/kirbstore/polygol/recommend.json');
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.schedules) {
+                        const now = new Date();
+                        let activeRecs = data.default || { homeFeatured: [], editorsPicks: [], stories:[] };
+                        
+                        for (const schedule of data.schedules) {
+                            if (new Date(schedule.startDate) <= now && new Date(schedule.endDate) >= now) {
+                                activeRecs = schedule.recommendations;
+                                break;
+                            }
+                        }
+                        recommendations = activeRecs;
+                    } else {
+                        // Fallback for legacy format without schedules
+                        recommendations = data;
+                    }
+                }
+            } catch (e) {
+                console.warn("Could not load recommendations", e);
+            }
+            
+            // Fallback if missing core arrays
+            if (!recommendations.editorsPicks || recommendations.editorsPicks.length === 0) {
+                recommendations.editorsPicks = appStoreInventory.slice(0, 4).map(a => a.id);
+                recommendations.homeFeatured = appStoreInventory.slice(4, 7).map(a => ({
+                    appId: a.id,
+                    tagline: "Featured App",
+                    color: stringToColor(a.name)
+                }));
+                recommendations.stories =[
+                    { title: "Essential Tools", subtitle: "Boost productivity", apps: appStoreInventory.filter(a => a.category === "Tools").slice(0, 3).map(a=>a.id), color: "#3498db" }
+                ];
+            }
+        }
+        
         async function loadAllInventories() {
-            appGrid.innerHTML = `<div class="loading-message"><svg class="loading-spinner" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="currentColor" stroke="none" class="loading-spinner-ind" /></svg></div>`;
+            mainContent.innerHTML = `<div class="loading-message"><svg class="loading-spinner" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="currentColor" stroke="none" class="loading-spinner-ind" /></svg></div>`;
             const allFetchPromises = storeSources.map(url => fetchInventory(url));
             const allInventories = await Promise.all(allFetchPromises);
             const rawInventory = allInventories.flatMap(inventory => (inventory && inventory.apps) ? inventory.apps : []);
@@ -500,7 +626,8 @@
                 });
             }
             
-            filterAndRender();
+            await loadRecommendations();
+            renderView();
         }
         
         function saveStoreSources() {
@@ -508,40 +635,10 @@
         }
     
         function createAppCard(app) {
-            const installedVersion = installedAppsInfo[app.name];
-            const isInstalled = !!installedVersion;
-            
-            // Check for updates by comparing file lists (more reliable than version numbers)
-            const hasUpdate = isInstalled && 
-                              app.filesToCache && 
-                              installedVersion.filesToCache &&
-                              app.filesToCache.sort().toString() !== installedVersion.filesToCache.sort().toString();
-    
             const icon = app.iconUrl || '/assets/appicon/default.png'; 
         
-            let buttonHtml = '';
-            if (isInstalled) {
-                buttonHtml += `<div class="app-actions">`;
-                if (hasUpdate) {
-                    buttonHtml += `<button class="update-btn" data-id="${app.id}">
-                                       <span class="material-symbols-rounded">cloud_download</span>
-                                       Update
-                                   </button>`;
-                }
-                buttonHtml += `<button class="uninstall-btn" data-name="${app.name}">
-                                   <span class="material-symbols-rounded">cancel</span>
-                                   Uninstall
-                               </button>`;
-                buttonHtml += `</div>`;
-            } else {
-                buttonHtml = `<button class="install-btn" data-id="${app.id}">
-                               <span class="material-symbols-rounded">arrow_circle_down</span>
-                               Install
-                           </button>`;
-            }
-        
             return `
-                <div class="app-card" data-app-name="${app.name}">
+                <div class="app-card" data-app-id="${app.id}">
                     <div class="app-header">
                         <img src="${icon}" alt="${app.name}" class="app-icon" crossorigin="anonymous" referrerpolicy="no-referrer">
                         <div class="app-info">
@@ -549,81 +646,409 @@
                             <div class="app-developer">${app.developer || 'Unknown Developer'}</div>
                         </div>
                     </div>
-                    ${buttonHtml}
                 </div>
             `;
         }
     
-        function filterAndRender() {
-            const searchTerm = searchInput.value.toLowerCase();
-            let filteredApps = appStoreInventory;
-    
-            if (searchTerm) {
-                filteredApps = filteredApps.filter(app => 
-                    app.name.toLowerCase().includes(searchTerm) || 
-                    app.developer.toLowerCase().includes(searchTerm)
-                );
-            }
-    
-            if (currentCategory !== 'All') {
-                filteredApps = filteredApps.filter(app => app.category === currentCategory);
-            }
+        function renderView() {
+            mainContent.innerHTML = '';
             
-            if(filteredApps.length > 0) {
-                 appGrid.innerHTML = filteredApps.map(app => createAppCard(app)).join('');
-            } else {
-                 appGrid.innerHTML = `<div class="no-apps-message">No apps found</div>`;
-            }
+            if (currentTab === 'home') renderHome(mainContent);
+            else if (currentTab === 'today') renderToday(mainContent);
+            else if (currentTab === 'apps') renderApps(mainContent);
+            else if (currentTab === 'search') renderSearch(mainContent);
+            else if (currentTab === 'you') renderYou(mainContent);
         }
-    
+
+        function renderHome(container) {
+            let html = '';
+            if (recommendations.homeFeatured.length > 0) {
+                html += `<div class="horizontal-scroll">`;
+                recommendations.homeFeatured.forEach(feat => {
+                    const app = appStoreInventory.find(a => a.id === feat.appId);
+                    if (!app) return;
+                    const color = feat.color || stringToColor(app.name);
+                    html += `
+                        <div class="hero-card app-card-clickable" data-app-id="${app.id}" style="background-color: ${color}; min-width: 40%; flex-shrink: 0;">
+                            ${feat.banner ? `<img src="${feat.banner}" />` : ''}
+                            <div class="content-z">
+                                <div class="hero-tag">${feat.tagline || 'Featured'}</div>
+                                <div class="hero-title">${app.name}</div>
+                                <div class="hero-subtitle">${app.developer}</div>
+                            </div>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            }
+
+            if (recommendations.editorsPicks.length > 0) {
+                html += `
+                    <div class="section-title">Editors' Picks</div>
+                    <div class="app-grid">
+                        ${recommendations.editorsPicks.map(id => {
+                            const app = appStoreInventory.find(a => a.id === id);
+                            return app ? createAppCard(app) : '';
+                        }).join('')}
+                    </div>
+                `;
+            }
+            container.innerHTML = html;
+        }
+        
+        function renderToday(container) {
+            // Get today's date
+            const today = new Date();
+            
+            // Array of month names
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ];
+
+            // Array of weekday names
+            const weekDayNames = [
+                "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+            ];
+
+            // Get the weekday name (e.g., "Tuesday")
+            const weekday = weekDayNames[today.getDay()];
+
+            // Get the day of the month (e.g., 16)
+            const day = today.getDate();
+
+            // Get the month name (e.g., "March")
+            const month = monthNames[today.getMonth()];
+
+            // Format the day with the "st", "nd", "rd", or "th" suffix
+            const daySuffix = (day) => {
+                if (day >= 11 && day <= 13) return "th"; // Special case for 11th-13th
+                switch (day % 10) {
+                    case 1: return "st";
+                    case 2: return "nd";
+                    case 3: return "rd";
+                    default: return "th";
+                }
+            };
+
+            // Combine everything into the desired format
+            const formattedDate = `${weekday}, ${day}${daySuffix(day)} ${month}`;
+
+            // Create the HTML content with the formatted date
+            let html = `<div class="section-title">${formattedDate}</div><div style="display: flex; flex-direction: column; gap: 30px;">`;
+            
+            recommendations.stories.forEach(story => {
+                html += `
+                    <div>
+                        <div class="hero-card" style="background-color: ${story.color || '#555'}; min-height: 250px; z-index: 2;">
+                            <div class="content-z">
+                                <div class="hero-tag">${story.subtitle}</div>
+                                <div class="hero-title">${story.title}</div>
+                            </div>
+                        </div>
+                        <div class="horizontal-scroll" style="border-radius: 35px; margin-bottom: 0; margin-top: 15px; z-index: 1;">
+                            ${story.apps.map(id => {
+                                const app = appStoreInventory.find(a => a.id === id);
+                                if (!app) return '';
+                                return `
+                                    <div class="featured-small-card app-card-clickable" data-app-id="${app.id}">
+                                        <div style="display: flex; align-items: center; gap: 15px;">
+                                            <img src="${app.iconUrl}" style="width: 50px; height: 50px; border-radius: 35%; corner-shape: superellipse(1.25);">
+                                            <div>
+                                                <div style="font-weight: bold; font-family: 'Open Runde';">${app.name}</div>
+                                                <div style="font-size: 13px; color: var(--secondary-text-color);">${app.developer}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function renderApps(container) {
+            const categories =['All', ...new Set(appStoreInventory.map(a => a.category))].filter(Boolean);
+            let html = `<div class="category-filter">`;
+            categories.forEach(cat => {
+                html += `<button class="category-btn ${currentCategory === cat ? 'active' : ''}" data-category="${cat}">${cat}</button>`;
+            });
+            html += `</div><div class="app-grid" id="appsViewGrid">`;
+            
+            let appsToRender = appStoreInventory;
+            if (currentCategory !== 'All') appsToRender = appsToRender.filter(a => a.category === currentCategory);
+            
+            html += appsToRender.length > 0 ? appsToRender.map(a => createAppCard(a)).join('') : '<div class="no-apps-message">No apps found</div>';
+            html += `</div>`;
+            
+            container.innerHTML = html;
+            
+            container.querySelectorAll('.category-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    currentCategory = e.target.dataset.category;
+                    renderApps(container);
+                });
+            });
+        }
+
+        function renderSearch(container) {
+            let html = `
+                <div class="search-container" style="position: fixed; width: 90%; z-index: 1; left: 50%; transform: translateX(-50%);">
+                    <span class="material-symbols-rounded search-icon" style="padding-left: 2px;">search</span>
+                    <input type="text" id="searchInput" placeholder="Search apps, games, categories and more" class="library-search-input">
+                </div>
+                <div class="app-grid" id="searchGrid" style="padding-top: 60px;"></div>
+            `;
+            container.innerHTML = html;
+            
+            const input = container.querySelector('#searchInput');
+            const grid = container.querySelector('#searchGrid');
+            
+            const updateSearch = () => {
+                const term = input.value.toLowerCase();
+                if (!term) {
+                    grid.innerHTML = '';
+                    return;
+                }
+                const filtered = appStoreInventory.filter(a => a.name.toLowerCase().includes(term) || (a.developer && a.developer.toLowerCase().includes(term)));
+                grid.innerHTML = filtered.length > 0 ? filtered.map(a => createAppCard(a)).join('') : '<div class="no-apps-message">No results found</div>';
+            };
+            
+            input.addEventListener('input', updateSearch);
+            updateSearch();
+        }
+
+        function renderYou(container) {
+            let html = `
+                <div class="section-title" style="margin-top: 30px;">Installed Apps</div>
+                <div class="app-grid">
+                <div>
+                    <div style="font-size: 20px; font-family: 'Open Runde'; font-weight: bold; margin: 10px 0;">External app stores</div>
+                    <button class="action-btn" id="youAddStoreBtn" style="background: var(--accent); color: var(--background-color); padding: 10px 18px; border-radius: 20px; border: none; cursor: pointer; font-weight: 500; font-family: 'Inter';">Add store</button>
+                </div>
+            `;
+            
+            const installedApps = appStoreInventory.filter(a => installedAppsInfo[a.name]);
+            html += installedApps.length > 0 ? installedApps.map(a => createAppCard(a)).join('') : `<div class="no-apps-message" style="grid-column: 1/-1;">No apps installed yet.</div>`;
+            html += `</div>`;
+            container.innerHTML = html;
+            
+            container.querySelector('#youAddStoreBtn').addEventListener('click', () => {
+                addStoreModal.classList.add('show');
+            });
+        }
+
+        function showAppDetails(app) {
+            const installedVersion = installedAppsInfo[app.name];
+            const isInstalled = !!installedVersion;
+
+            // Check for updates by comparing file lists (more reliable than version numbers)
+            const hasUpdate = isInstalled && 
+                              app.filesToCache && 
+                              installedVersion.filesToCache &&
+                              app.filesToCache.sort().toString() !== installedVersion.filesToCache.sort().toString();
+
+            let buttonHtml = '';
+            
+            const send = (data) => {
+                const msg = { action: 'callGurasuraisuFunc', functionName: 'sheetMessageToApp', args: [data] };
+                return `window.parent.postMessage(${JSON.stringify(msg).replace(/"/g, '&quot;')}, '*')`;
+            };
+
+            if (isInstalled) {
+                if (hasUpdate) {
+                    buttonHtml = `<button class="action-btn update-btn" onclick="${send({action: 'update', id: app.id})}">Update</button>`;
+                }
+                buttonHtml = `<button class="action-btn uninstall-btn" onclick="${send({action: 'uninstall', name: app.name})}">Uninstall</button>`;
+            } else {
+                buttonHtml = `<button class="action-btn install-btn" onclick="${send({action: 'install', id: app.id})}">Install</button>`;
+            }
+
+            const screenshotsHtml = (app.screenshots || []).map(s => `<img src="${s}" class="screenshot">`).join('');
+            const descHtml = app.description || 'No description available';
+            const privacyHtml = app.privacy || 'This app may collect personal and/or analytical data.';
+
+            const sheetHtml = `
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <style>
+                            body {
+                                margin: 0;
+                                padding: 0 20px;
+                                font-family: 'Inter', sans-serif;
+                                color: var(--text-color);
+                            }
+                            .header {
+                                display: flex;
+                                gap: 20px;
+                                align-items: center;
+                                margin-bottom: 30px;
+                            }
+                            .icon {
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 35%;
+                                corner-shape: superellipse(1.25);
+                            }
+                            .info {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+                                flex: 1;
+                            }
+                            .name {
+                                font-size: 1.5rem;
+                                font-family: 'Open Runde';
+                                font-weight: bold;
+                            }
+                            .dev {
+                                color: var(--secondary-text-color);
+                                font-size: 1rem;
+                            }
+                            .action-btn {
+                                padding: 10px 18px;
+                                border-radius: 25px;
+                                border: none;
+                                font-weight: 500;
+                                cursor: pointer;
+                                background: var(--accent);
+                                color: var(--background-color);
+                                border: 1px solid var(--glass-border);
+                                box-shadow: var(--sun-shadow);
+                                font-family: 'Inter';
+                            }
+                            .uninstall-btn {
+                                background: var(--search-background);
+                                color: var(--text-color);
+                            }
+                            .screenshots {
+                                display: flex;
+                                gap: 15px;
+                                overflow-x: auto;
+                                padding-bottom: 15px;
+                                margin-bottom: 25px;
+                                scroll-snap-type: x mandatory;
+                                border-radius: 50px;
+                                corner-shape: superellipse(1.5);
+                            }
+                            .screenshots::-webkit-scrollbar {
+                                display: none;
+                            }
+                            .screenshot {
+                                height: 350px;
+                                border-radius: inherit;
+                                corner-shape: inherit;
+                                object-fit: contain;
+                                scroll-snap-align: center;
+                                background: rgba(0, 0, 0, 0.2);
+                            }
+                            .section {
+                                margin-bottom: 10px;
+                                background: var(--search-background);
+                                border: 1px solid var(--glass-border);
+                                box-shadow: var(--sun-shadow);
+                                padding: 16px 20px;
+                                border-radius: 35px;
+                                corner-shape: superellipse(1.5);
+                            }
+                            .section h3 {
+                                font-family: 'Open Runde';
+                                margin-top: 0;
+                                margin-bottom: 10px;
+                                font-size: 0.9rem;
+                            }
+                            .section p {
+                                color: var(--secondary-text-color, #ccc);
+                                margin: 0;
+                                font-size: 0.9rem;
+                            }
+                            .desc {
+                                font-size: 1rem;
+                                padding: 0 10px;
+                            }
+                            .actions-row {
+                                display: flex;
+                                gap: 10px;
+                                margin-top: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="header">
+                            <img src="${app.iconUrl}" class="icon">
+                            <div class="info">
+                                <div class="name">${app.name}</div>
+                                <div class="dev">${app.developer}</div>
+                                <div class="actions-row">${buttonHtml}</div>
+                            </div>
+                        </div>
+                        ${app.screenshots && app.screenshots.length > 0 ? `
+                        <div class="screenshots">
+                            ${screenshotsHtml}
+                        </div>` : ''}
+                        <p class="desc">${descHtml}</p>
+                        <div class="section">
+                            <h3>Privacy & Data</h3>
+                            <p>${privacyHtml}</p>
+                        </div>
+                    </body>
+                </html>
+            `;
+
+            Gurasuraisu.showSheet({
+                html: sheetHtml,
+                height: '85%'
+            });
+        }
+        
+        function setupSheetListener() {
+            Gurasuraisu.sheet.onMessage((msg) => {
+                if (msg.action === 'install' || msg.action === 'update') {
+                    const app = appStoreInventory.find(a => a.id === msg.id);
+                    if (app) {
+                        Gurasuraisu.installApp(app);
+                        installedAppsInfo[app.name] = { filesToCache: app.filesToCache };
+                        renderView();
+                        Gurasuraisu.closeSheet();
+                    }
+                } else if (msg.action === 'uninstall') {
+                    Gurasuraisu.deleteApp(msg.name);
+                    delete installedAppsInfo[msg.name];
+                    renderView();
+                    Gurasuraisu.closeSheet();
+                }
+            });
+        }
+
         window.addEventListener('message', (event) => {
             if (event.origin !== window.location.origin) return;
             if (event.data.type === 'installed-apps-list') {
-                installedAppsInfo = event.data.apps || {}; // Expect an object now
-                filterAndRender(); // Re-render with version info
+                installedAppsInfo = event.data.apps || {}; 
+                renderView();
             }
         });
         
-        appGrid.addEventListener('click', (e) => {
-            const installBtn = e.target.closest('.install-btn');
-            const updateBtn = e.target.closest('.update-btn');
-            const uninstallBtn = e.target.closest('.uninstall-btn');
-    
-            // Handle both Install and Update, as they call the same function
-            const actionBtn = installBtn || updateBtn;
-            if (actionBtn && !actionBtn.disabled) {
-                const appId = actionBtn.dataset.id;
-                const appToInstall = appStoreInventory.find(app => app.id === appId);
-                if (appToInstall) {
-                    // The parent's installApp function handles both installing and updating
-                    Gurasuraisu.installApp(appToInstall);
-                    
-                    // Immediately update UI for responsiveness, now without version
-                    installedAppsInfo[appToInstall.name] = { 
-                        filesToCache: appToInstall.filesToCache
-                    };
-                    filterAndRender(); // Re-render to show the change
-                }
-            } else if (uninstallBtn) {
-                const appName = uninstallBtn.dataset.name;
-                if (appName) {
-                    Gurasuraisu.deleteApp(appName);
-    
-                    // Immediately update UI for responsiveness
-                    delete installedAppsInfo[appName];
-                    filterAndRender(); // Re-render to show the change
+        mainContent.addEventListener('click', (e) => {
+            const card = e.target.closest('.app-card, .app-card-clickable');
+            
+            if (card) {
+                const appId = card.dataset.appId;
+                if (appId) {
+                    const app = appStoreInventory.find(a => a.id === appId);
+                    if (app) showAppDetails(app);
                 }
             }
         });
     
-        searchInput.addEventListener('input', filterAndRender);
-    
-        categoryBtns.forEach(btn => {
+        tabs.forEach(btn => {
             btn.addEventListener('click', () => {
-                categoryBtns.forEach(b => b.classList.remove('active'));
+                tabs.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                currentCategory = btn.dataset.category;
-                filterAndRender();
+                currentTab = btn.dataset.tab;
+                renderView();
             });
         });
     
@@ -638,7 +1063,7 @@
                 openUrl: '/kirbstore/index.html' // Tapping the widget opens the main app
             });
 
-            // Now, continue with other initializations.
+            setupSheetListener();
             Gurasuraisu.requestInstalledApps();
             loadAllInventories();
         }
