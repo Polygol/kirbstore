@@ -824,10 +824,6 @@
             let html = `
                 <div class="section-title" style="margin-top: 30px;">Installed Apps</div>
                 <div class="app-grid">
-                <div>
-                    <div style="font-size: 20px; font-family: 'Open Runde'; font-weight: bold; margin: 10px 0;">External app stores</div>
-                    <button class="action-btn" id="youAddStoreBtn" style="background: var(--accent); color: var(--background-color); padding: 10px 18px; border-radius: 20px; border: none; cursor: pointer; font-weight: 500; font-family: 'Inter';">Add store</button>
-                </div>
             `;
             
             const installedApps = appStoreInventory.filter(a => installedAppsInfo[a.name]);
