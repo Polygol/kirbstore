@@ -9,7 +9,7 @@
             "description": "Clock application with alarms, timers, stopwatch and world clock",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/alarm.png",
             "url": "https://polygol.github.io/chronos/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/alarm1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/alarm2.png",
@@ -25,7 +25,7 @@
             "description": "Calculator application",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/calculator.png",
             "url": "https://polygol.github.io/ailuator/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/calculator1.png"],
             "filesToCache": ["https://polygol.github.io/ailuator/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/calculator.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
@@ -38,7 +38,7 @@
             "description": "Document writing application",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/docs.png",
             "url": "https://polygol.github.io/wordy/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/docs1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/docs2.png",
@@ -54,7 +54,7 @@
             "description": "Stay on top of your schedule with Fantaskical. Add tasks to do, and mark important dates.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/tasks.png",
             "url": "https://polygol.github.io/fantaskical/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/tasks1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/tasks2.png",
@@ -70,7 +70,7 @@
             "description": "Relive your favorite memories. Use Moments to see photos captured by Polygol Camera.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/photos.png",
             "url": "https://polygol.github.io/moments/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/photos1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/photos2.png"
@@ -132,7 +132,7 @@
             "description": "Basic drawing application",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/sketch.png",
             "url": "https://polygol.github.io/sketchpad/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/sketch1.png"
             ],
@@ -146,7 +146,7 @@
             "description": "Let's invite someone! With Invitations, make invites quick and easy, and print or share them around",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/mail.png",
             "url": "https://polygol.github.io/invitations/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/mail1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/mail2.png",
@@ -178,7 +178,7 @@
             "description": "Easy camera application",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/camera.png",
             "url": "https://polygol.github.io/camera/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/camera1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/camera2.png",
@@ -194,7 +194,7 @@
             "description": "Manage your Polygol",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/terminal.png",
             "url": "https://polygol.github.io/terminal/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/terminal1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/terminal2.png",
@@ -210,7 +210,7 @@
             "description": "Funizier suite - fun customizer tools for you! ❤️⚡☁️ Create widgets - easily with Widgizer 🪟☺️✅",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/widgizier.png",
             "url": "https://funizier.github.io/widgizier",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/widgizier1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/widgizier2.png",
@@ -226,7 +226,7 @@
             "description": "Your infinite digital brainstorming team. Write down notes, drawings and diagrams on an infinite canvas.",
             "iconUrl": "https://polygol.github.io/kirbstore/inventories/default/appicon/livespace.png",
             "url": "https://polygol.github.io/livespace/index.html",
-            "privacy": "This app does not send nor recieve any data.",
+            "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/livespace1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/livespace2.png",
