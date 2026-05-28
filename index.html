@@ -6,7 +6,7 @@
     <title>kirbStore only works with Polygol.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,700,1,0" />
-    <script src="/assets/gurapp/api/gurasuraisu-api.js" defer></script>
+    <script src="./assets/gurapp/api/gurasuraisu-api.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         * {
@@ -635,7 +635,7 @@
         }
     
         function createAppCard(app) {
-            const icon = app.iconUrl || '/assets/appicon/default.png'; 
+            const icon = app.iconUrl || './assets/appicon/default.png'; 
         
             return `
                 <div class="app-card" data-app-id="${app.id}">
@@ -850,7 +850,7 @@
             
             const send = (data) => {
                 const msg = { action: 'callGurasuraisuFunc', functionName: 'sheetMessageToApp', args: [data] };
-                return `window.parent.postMessage(${JSON.stringify(msg).replace(/"/g, '&quot;')}, '*')`;
+                return `window.parent.postMessage(${JSON.stringify(msg).replace(/"./g, '&quot;')}, '*')`;
             };
 
             if (isInstalled) {
@@ -1053,9 +1053,9 @@
                 appName: 'kirbStore',
                 widgetId: 'kirbstore-random-app',
                 title: 'Random App',
-                url: '/kirbstore/widgets/widget-random-app.html',
+                url: './kirbstore/widgets/widget-random-app.html',
                 defaultSize: [1, 1],
-                openUrl: '/kirbstore/index.html' // Tapping the widget opens the main app
+                openUrl: './kirbstore/index.html' // Tapping the widget opens the main app
             });
 
             setupSheetListener();

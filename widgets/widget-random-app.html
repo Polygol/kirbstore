@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random App</title>
-    <script src="/assets/gurapp/api/gurasuraisu-api.js"></script>
+    <script src="./assets/gurapp/api/gurasuraisu-api.js"></script>
     <style>
         :root {
             /* These will be inherited from the parent Polygol window */
@@ -93,9 +93,9 @@
                     appName: 'App Store',
                     widgetId: 'appstore-random-app',
                     title: 'Random App',
-                    url: '/appstore/widgets/widget-random-app.html',
+                    url: './appstore/widgets/widget-random-app.html',
                     defaultSize: [1, 1],
-                    openUrl: '/appstore/index.html' // Tapping the widget opens the main app
+                    openUrl: './appstore/index.html' // Tapping the widget opens the main app
                 });
             }
 
@@ -103,8 +103,8 @@
 
             // Best Practice: Use the same data sources as the main application.
             let storeSources = JSON.parse(localStorage.getItem('appStoreSources')) || [
-                "/appstore/inventories/default/inventory.json",
-                "/glucose-gurapps/inventory.json"
+                "./appstore/inventories/default/inventory.json",
+                "./glucose-gurapps/inventory.json"
             ];
 
             async function fetchInventory(url) {
@@ -131,7 +131,7 @@
 
                 const randomIndex = Math.floor(Math.random() * allApps.length);
                 const randomApp = allApps[randomIndex];
-                const icon = randomApp.iconUrl || '/assets/appicon/default.png';
+                const icon = randomApp.iconUrl || './assets/appicon/default.png';
 
                 widgetContainer.innerHTML = `
                     <img src="${icon}" class="widget-icon">
