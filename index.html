@@ -418,7 +418,7 @@
             transition: all 0.3s ease;
             backdrop-filter: var(--edge-refraction-filter) saturate(2) blur(2.5px);
             box-shadow: var(--sun-shadow), 0 0 15px rgba(0, 0, 0, 0.05);
-            padding: 12px 17px 12px 42px;"
+            padding: 12px 17px 12px 42px;
         }
 
         @media (max-width: 480px) {
@@ -850,7 +850,7 @@
             
             const send = (data) => {
                 const msg = { action: 'callGurasuraisuFunc', functionName: 'sheetMessageToApp', args: [data] };
-                return `window.parent.postMessage(${JSON.stringify(msg).replace(/"./g, '&quot;')}, '*')`;
+                return `window.parent.postMessage(${JSON.stringify(msg).replace(/"/g, '&quot;')}, '*')`;
             };
 
             if (isInstalled) {
