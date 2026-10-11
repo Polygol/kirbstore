@@ -1,5 +1,5 @@
 {
-    "+readme_inventory_details": "kirbIndustries: Gurapps Default",
+    "+readme_inventory_details": "kirbIndustries: Polygolapps Default",
     "apps": [
         {
             "id": "chronos",
@@ -15,7 +15,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/alarm2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/alarm3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/chronos/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/alarm.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://www.gstatic.com/delight/funbox/timer_utilitarian_v2.mp3", "https://momentjs.com/downloads/moment.min.js", "https://momentjs.com/downloads/moment-timezone-with-data.min.js"]
+            "filesToCache": ["https://polygol.github.io/chronos/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/alarm.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js", "https://www.gstatic.com/delight/funbox/timer_utilitarian_v2.mp3", "https://momentjs.com/downloads/moment.min.js", "https://momentjs.com/downloads/moment-timezone-with-data.min.js"]
         },
         {
             "id": "ailuator",
@@ -28,7 +28,7 @@
             "privacy": "This app does not send nor receive any data.",
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/calculator1.png"],
-            "filesToCache": ["https://polygol.github.io/ailuator/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/calculator.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/ailuator/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/calculator.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "wordy",
@@ -44,7 +44,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/docs2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/docs3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/wordy/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/docs.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/wordy/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/docs.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "fantaskical",
@@ -60,7 +60,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/tasks2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/tasks3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/fantaskical/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/tasks.png", "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/fantaskical/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/tasks.png", "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "moments",
@@ -75,7 +75,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/photos1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/photos2.png"
             ],
-            "filesToCache": ["https://polygol.github.io/moments/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/photos.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/moments/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/photos.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "music",
@@ -91,7 +91,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/music2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/music3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/music/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/music.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"]
+            "filesToCache": ["https://polygol.github.io/music/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/music.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js", "https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"]
         },
         {
             "id": "streams",
@@ -107,7 +107,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/streams2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/streams3.png"
             ],
-            "filesToCache": ["https://streamsmusic.github.io/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/streams.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"]
+            "filesToCache": ["https://streamsmusic.github.io/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/streams.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js", "https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"]
         },
         {
             "id": "clapper",
@@ -122,7 +122,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/video1.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/video2.png"
             ],
-            "filesToCache": ["https://polygol.github.io/clapper/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/video.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/clapper/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/video.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "sketchpad",
@@ -136,7 +136,7 @@
             "screenshots": [
                 "https://polygol.github.io/kirbstore/inventories/default/preview/sketch1.png"
             ],
-            "filesToCache": ["https://polygol.github.io/sketchpad/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/sketch.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/sketchpad/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/sketch.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "invitations",
@@ -152,7 +152,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/mail2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/mail3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/invitations/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/mail.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/invitations/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/mail.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "weather",
@@ -168,7 +168,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/weather2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/weather3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/weather/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/weather.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/weather/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/weather.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "camera",
@@ -184,7 +184,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/camera2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/camera3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/camera/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/camera.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/camera/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/camera.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "terminal",
@@ -200,7 +200,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/terminal2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/terminal3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/terminal/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/terminal.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://polygol.github.io/terminal/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/terminal.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "widgizier",
@@ -216,7 +216,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/widgizier2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/widgizier3.png"
             ],
-            "filesToCache": ["https://funizier.github.io/widgizier", "https://polygol.github.io/kirbstore/inventories/default/appicon/widgizier.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js"]
+            "filesToCache": ["https://funizier.github.io/widgizier", "https://polygol.github.io/kirbstore/inventories/default/appicon/widgizier.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js"]
         },
         {
             "id": "livespace",
@@ -232,7 +232,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/livespace2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/livespace3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/livespace/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/livespace.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://polygol.github.io/livespace/fabric.min.js", "https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.4/dexie.min.js"]
+            "filesToCache": ["https://polygol.github.io/livespace/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/livespace.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js", "https://polygol.github.io/livespace/fabric.min.js", "https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.4/dexie.min.js"]
         },
         {
             "id": "messages",
@@ -248,7 +248,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/messages2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/messages3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/messages/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/messages.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://esm.sh/trystero@0.15.1/torrent"]
+            "filesToCache": ["https://polygol.github.io/messages/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/messages.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js", "https://esm.sh/trystero@0.15.1/torrent"]
         },
         {
             "id": "hearmience",
@@ -264,7 +264,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/hearmience2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/hearmience3.png"
             ],
-            "filesToCache":["https://polygol.github.io/hearmience/index.html","https://polygol.github.io/kirbstore/inventories/default/appicon/hearmience.png","https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js","https://polygol.github.io/hearmience/activity.html","https://actions.google.com/sounds/v1/ambiences/ambient_hum_air_conditioner.ogg","https://actions.google.com/sounds/v1/ambiences/children_group_ambience.ogg","https://actions.google.com/sounds/v1/ambiences/coffee_shop.ogg","https://actions.google.com/sounds/v1/ambiences/dmv_background_noise.ogg","https://actions.google.com/sounds/v1/ambiences/laundromat_sounds.ogg","https://actions.google.com/sounds/v1/ambiences/retail_background_noises.ogg","https://actions.google.com/sounds/v1/ambiences/subway_station_nyc.ogg","https://actions.google.com/sounds/v1/weather/long_silence_at_top.ogg","https://actions.google.com/sounds/v1/ambiences/barnyard_with_animals.ogg","https://actions.google.com/sounds/v1/ambiences/inside_barn_with_chickens.ogg","https://actions.google.com/sounds/v1/ambiences/morning_farm.ogg","https://actions.google.com/sounds/v1/ambiences/outdoor_farm_sounds.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_afternoon.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_late_night.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_morning.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_night.ogg","https://actions.google.com/sounds/v1/ambiences/spring_day_forest.ogg","https://actions.google.com/sounds/v1/ambiences/summer_forest.ogg","https://actions.google.com/sounds/v1/weather/leaves_russle_on_tree.ogg","https://actions.google.com/sounds/v1/ambiences/arcade_room.ogg","https://actions.google.com/sounds/v1/ambiences/factory_background.ogg","https://actions.google.com/sounds/v1/ambiences/factory_manufacture_background.ogg","https://actions.google.com/sounds/v1/ambiences/factory_morning_start_up.ogg","https://actions.google.com/sounds/v1/ambiences/factory_sounds.ogg","https://actions.google.com/sounds/v1/ambiences/distant_highway.ogg","https://actions.google.com/sounds/v1/ambiences/highway_near_waterfront.ogg","https://actions.google.com/sounds/v1/ambiences/morning_highway_in_distance.ogg","https://actions.google.com/sounds/v1/weather/windy_weather_driving.ogg","https://actions.google.com/sounds/v1/ambiences/truck_beeping.ogg","https://actions.google.com/sounds/v1/weather/ice_or_rain.ogg","https://actions.google.com/sounds/v1/weather/light_rain.ogg","https://actions.google.com/sounds/v1/weather/rain_heavy_loud.ogg","https://actions.google.com/sounds/v1/weather/rain_heavy_quiet_interior.ogg","https://actions.google.com/sounds/v1/weather/rain_on_roof.ogg","https://actions.google.com/sounds/v1/weather/rain_on_rooftop.ogg","https://actions.google.com/sounds/v1/weather/rain_water_dripping_fast_hard.ogg","https://actions.google.com/sounds/v1/weather/rain_water_dripping_softly.ogg","https://actions.google.com/sounds/v1/weather/rain_on_car_heavy.ogg","https://actions.google.com/sounds/v1/weather/afternoon_storm_long.ogg","https://actions.google.com/sounds/v1/weather/distant_thunder.ogg","https://actions.google.com/sounds/v1/weather/low_thunder_rolls.ogg","https://actions.google.com/sounds/v1/weather/rolling_thunder.ogg","https://actions.google.com/sounds/v1/weather/summer_thunder_and_rain.ogg","https://actions.google.com/sounds/v1/weather/thunder_crack.ogg","https://actions.google.com/sounds/v1/weather/thunderstorm.ogg","https://actions.google.com/sounds/v1/weather/thunderstorm_long.ogg","https://actions.google.com/sounds/v1/weather/desert_howling_wind.ogg","https://actions.google.com/sounds/v1/weather/strong_wind.ogg","https://actions.google.com/sounds/v1/weather/wind.ogg"]
+            "filesToCache":["https://polygol.github.io/hearmience/index.html","https://polygol.github.io/kirbstore/inventories/default/appicon/hearmience.png","https://polygol.github.io/assets/polygolapp/api/polygol-api.js","https://polygol.github.io/hearmience/activity.html","https://actions.google.com/sounds/v1/ambiences/ambient_hum_air_conditioner.ogg","https://actions.google.com/sounds/v1/ambiences/children_group_ambience.ogg","https://actions.google.com/sounds/v1/ambiences/coffee_shop.ogg","https://actions.google.com/sounds/v1/ambiences/dmv_background_noise.ogg","https://actions.google.com/sounds/v1/ambiences/laundromat_sounds.ogg","https://actions.google.com/sounds/v1/ambiences/retail_background_noises.ogg","https://actions.google.com/sounds/v1/ambiences/subway_station_nyc.ogg","https://actions.google.com/sounds/v1/weather/long_silence_at_top.ogg","https://actions.google.com/sounds/v1/ambiences/barnyard_with_animals.ogg","https://actions.google.com/sounds/v1/ambiences/inside_barn_with_chickens.ogg","https://actions.google.com/sounds/v1/ambiences/morning_farm.ogg","https://actions.google.com/sounds/v1/ambiences/outdoor_farm_sounds.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_afternoon.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_late_night.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_morning.ogg","https://actions.google.com/sounds/v1/ambiences/jungle_atmosphere_night.ogg","https://actions.google.com/sounds/v1/ambiences/spring_day_forest.ogg","https://actions.google.com/sounds/v1/ambiences/summer_forest.ogg","https://actions.google.com/sounds/v1/weather/leaves_russle_on_tree.ogg","https://actions.google.com/sounds/v1/ambiences/arcade_room.ogg","https://actions.google.com/sounds/v1/ambiences/factory_background.ogg","https://actions.google.com/sounds/v1/ambiences/factory_manufacture_background.ogg","https://actions.google.com/sounds/v1/ambiences/factory_morning_start_up.ogg","https://actions.google.com/sounds/v1/ambiences/factory_sounds.ogg","https://actions.google.com/sounds/v1/ambiences/distant_highway.ogg","https://actions.google.com/sounds/v1/ambiences/highway_near_waterfront.ogg","https://actions.google.com/sounds/v1/ambiences/morning_highway_in_distance.ogg","https://actions.google.com/sounds/v1/weather/windy_weather_driving.ogg","https://actions.google.com/sounds/v1/ambiences/truck_beeping.ogg","https://actions.google.com/sounds/v1/weather/ice_or_rain.ogg","https://actions.google.com/sounds/v1/weather/light_rain.ogg","https://actions.google.com/sounds/v1/weather/rain_heavy_loud.ogg","https://actions.google.com/sounds/v1/weather/rain_heavy_quiet_interior.ogg","https://actions.google.com/sounds/v1/weather/rain_on_roof.ogg","https://actions.google.com/sounds/v1/weather/rain_on_rooftop.ogg","https://actions.google.com/sounds/v1/weather/rain_water_dripping_fast_hard.ogg","https://actions.google.com/sounds/v1/weather/rain_water_dripping_softly.ogg","https://actions.google.com/sounds/v1/weather/rain_on_car_heavy.ogg","https://actions.google.com/sounds/v1/weather/afternoon_storm_long.ogg","https://actions.google.com/sounds/v1/weather/distant_thunder.ogg","https://actions.google.com/sounds/v1/weather/low_thunder_rolls.ogg","https://actions.google.com/sounds/v1/weather/rolling_thunder.ogg","https://actions.google.com/sounds/v1/weather/summer_thunder_and_rain.ogg","https://actions.google.com/sounds/v1/weather/thunder_crack.ogg","https://actions.google.com/sounds/v1/weather/thunderstorm.ogg","https://actions.google.com/sounds/v1/weather/thunderstorm_long.ogg","https://actions.google.com/sounds/v1/weather/desert_howling_wind.ogg","https://actions.google.com/sounds/v1/weather/strong_wind.ogg","https://actions.google.com/sounds/v1/weather/wind.ogg"]
         },
         {
             "id": "wellbeing",
@@ -280,7 +280,7 @@
                 "https://polygol.github.io/kirbstore/inventories/default/preview/wellbeing2.png",
                 "https://polygol.github.io/kirbstore/inventories/default/preview/wellbeing3.png"
             ],
-            "filesToCache": ["https://polygol.github.io/wellbeing/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/wellbeing.png", "https://polygol.github.io/assets/gurapp/api/gurasuraisu-api.js", "https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js", "https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js", "https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"]
+            "filesToCache": ["https://polygol.github.io/wellbeing/index.html", "https://polygol.github.io/kirbstore/inventories/default/appicon/wellbeing.png", "https://polygol.github.io/assets/polygolapp/api/polygol-api.js", "https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js", "https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js", "https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"]
         }
     ]
 }

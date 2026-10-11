@@ -3,10 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>kirbStore only works with Polygol.</title>
+    <script src="lang.js">
+        // --- Internationalization (i18n) Support ---
+        function getAppLanguage() {
+            let l = (localStorage.getItem('language') || localStorage.getItem('selectedLanguage') || 'EN').toUpperCase();
+            if (l === 'JA') l = 'JP';
+            return ['EN', 'JP', 'KO', 'ZH'].includes(l) ? l : 'EN';
+        }
+
+        function t(key, params = {}) {
+            const lang = getAppLanguage();
+            const dict = window['LANG_' + lang + '_KIRBSTORE'] || window['LANG_EN_KIRBSTORE'] || {};
+            let str = dict[key] || key;
+            Object.keys(params).forEach(p => {
+                str = str.replace(new RegExp('\\{' + p + '\\}', 'g'), params[p]);
+            });
+            return str;
+        }
+
+        function applyLanguage(langCode) {
+            if (langCode) localStorage.setItem('language', langCode);
+            const lang = getAppLanguage();
+            const bcpMap = { EN: 'en-US', JP: 'ja-JP', KO: 'ko-KR', ZH: 'zh-CN' };
+            document.documentElement.lang = bcpMap[lang] || 'en-US';
+            document.querySelectorAll('[data-lang-key]').forEach(el => {
+                const k = el.getAttribute('data-lang-key');
+                if (k) {
+                    if (el.tagName === 'TITLE') {
+                        document.title = t(k);
+                    } else {
+                        el.textContent = t(k);
+                    }
+                }
+            });
+            document.querySelectorAll('[data-lang-placeholder]').forEach(el => {
+                const k = el.getAttribute('data-lang-placeholder');
+                if (k) el.placeholder = t(k);
+            });
+            document.querySelectorAll('[data-lang-title]').forEach(el => {
+                const k = el.getAttribute('data-lang-title');
+                if (k) el.title = t(k);
+            });
+            if (typeof onLanguageChanged === 'function') {
+                onLanguageChanged(lang);
+            }
+        }
+
+        window.addEventListener('message', (e) => {
+            if (e.data && (e.data.type === 'languageUpdate' || e.data.type === 'localeUpdate')) {
+                applyLanguage(e.data.languageCode);
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', () => applyLanguage());
+        
+
+    </script>
+    <title data-lang-key="TITLE">kirbStore only works with Polygol.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,700,1,0" />
-    <script src="https://cdn.jsdelivr.net/gh/Polygol/polygol.github.io@main/assets/gurapp/api/gurasuraisu-api.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/Polygol/polygol.github.io@main/assets/polygolapp/api/polygol-api.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         * {
@@ -432,24 +488,19 @@
     <div class="content">
         <div class="toolbar">
             <button class="tab-btn active" data-tab="home">
-                <span class="material-symbols-rounded">home</span>
-                Home
+                <span class="material-symbols-rounded">home</span><span data-lang-key="HOME">Home</span>
             </button>
             <button class="tab-btn" data-tab="today">
-                <span class="material-symbols-rounded">today</span>
-                Today
+                <span class="material-symbols-rounded">today</span><span data-lang-key="TODAY">Today</span>
             </button>
             <button class="tab-btn" data-tab="apps">
-                <span class="material-symbols-rounded">newsstand</span>
-                Library
+                <span class="material-symbols-rounded">newsstand</span><span data-lang-key="LIBRARY">Library</span>
             </button>
             <button class="tab-btn" data-tab="you">
-                <span class="material-symbols-rounded">account_circle</span>
-                You
+                <span class="material-symbols-rounded">account_circle</span><span data-lang-key="YOU">You</span>
             </button>
             <button class="tab-btn" data-tab="search">
-                <span class="material-symbols-rounded">search</span>
-                Search
+                <span class="material-symbols-rounded">search</span><span data-lang-key="SEARCH">Search</span>
             </button>
         </div>
 
@@ -462,14 +513,14 @@
     <div class="create-modal" id="addStoreModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Add External Repository</h2>
+                <h2 class="modal-title" data-lang-key="ADD_STORE_TITLE">Add External Repository</h2>
             </div>
-            <div style="margin-bottom: 20px;">Using an unverified external Store is at your own risk. It is recommended to only use kirbIndustries <a href="https://kirbindustries.gitbook.io/polygol/gurapps/verified-external-app-stores" target="_blank">verified stores</a>.</div>
+            <div style="margin-bottom: 20px;">Using an unverified external Store is at your own risk. It is recommended to only use kirbIndustries <a href="https://kirbindustries.gitbook.io/polygol/polygolapps/verified-external-app-stores" target="_blank">verified stores</a>.</div>
             <div class="form-group">
                 <label class="form-label">Store URL</label>
-                <input type="url" class="form-input" id="storeUrlInput" placeholder="Add a valid Polygol Store inventory URL" required>
+                <input type="url" class="form-input" id="storeUrlInput" data-lang-placeholder="ADD_STORE_URL_PLACEHOLDER" placeholder="Add a valid Polygol Store inventory URL" required>
             </div>
-            <button class="submit-btn" id="submitStore">Add Store</button>
+            <button class="submit-btn" id="submitStore" data-lang-key="ADD_STORE_BTN">Add Store</button>
         </div>
     </div>
 
@@ -488,7 +539,7 @@
     
         let storeSources = JSON.parse(localStorage.getItem('appStoreSources')) || [
             "https://polygol.github.io/kirbstore/inventories/default/inventory.json",
-            "https://polygol.github.io/glucose-gurapps/inventory.json"
+            "https://polygol.github.io/glucose-polygolapps/inventory.json"
         ];
 
         function shuffleArray(array) {
@@ -513,8 +564,8 @@
                 loadAllInventories();
                 storeUrlInput.value = '';
                 addStoreModal.classList.remove('show');
-                if (window.Gurasuraisu) {
-                    Gurasuraisu.showPopup('Store added successfully');
+                if (window.Polygol) {
+                    Polygol.showPopup('Store added successfully');
                 }
             }
         });
@@ -537,8 +588,8 @@
                 return data;
             } catch (error) {
                 console.error(`Failed to fetch or parse inventory from ${url}:`, error);
-                if (window.Gurasuraisu) {
-                    Gurasuraisu.showPopup(`Error loading store: ${url}`);
+                if (window.Polygol) {
+                    Polygol.showPopup(`Error loading store: ${url}`);
                 }
                 return [];
             }
@@ -672,7 +723,7 @@
                         <div class="hero-card app-card-clickable" data-app-id="${app.id}" style="background-color: ${color}; min-width: 40%; flex-shrink: 0;">
                             ${feat.banner ? `<img src="${feat.banner}" />` : ''}
                             <div class="content-z">
-                                <div class="hero-tag">${feat.tagline || 'Featured'}</div>
+                                <div class="hero-tag">${feat.tagline || t("FEATURED")}</div>
                                 <div class="hero-title">${app.name}</div>
                                 <div class="hero-subtitle">${app.developer}</div>
                             </div>
@@ -684,7 +735,7 @@
 
             if (recommendations.editorsPicks.length > 0) {
                 html += `
-                    <div class="section-title">Editors' Picks</div>
+                    <div class="section-title">${t("EDITORS_PICKS")}</div>
                     <div class="app-grid">
                         ${recommendations.editorsPicks.map(id => {
                             const app = appStoreInventory.find(a => a.id === id);
@@ -731,7 +782,9 @@
             };
 
             // Combine everything into the desired format
-            const formattedDate = `${weekday}, ${day}${daySuffix(day)} ${month}`;
+            const bcpMap = { EN: 'en-US', JP: 'ja-JP', KO: 'ko-KR', ZH: 'zh-CN' };
+            const currentLang = (typeof getAppLanguage === 'function' ? getAppLanguage() : 'EN');
+            const formattedDate = today.toLocaleDateString(bcpMap[currentLang] || 'en-US', { weekday: 'long', day: 'numeric', month: 'long' });
 
             // Create the HTML content with the formatted date
             let html = `<div class="section-title">${formattedDate}</div><div style="display: flex; flex-direction: column; gap: 30px;">`;
@@ -780,7 +833,7 @@
             let appsToRender = appStoreInventory;
             if (currentCategory !== 'All') appsToRender = appsToRender.filter(a => a.category === currentCategory);
             
-            html += appsToRender.length > 0 ? appsToRender.map(a => createAppCard(a)).join('') : '<div class="no-apps-message">No apps found</div>';
+            html += appsToRender.length > 0 ? appsToRender.map(a => createAppCard(a)).join('') : '<div class="no-apps-message">${t("NO_APPS_FOUND")}</div>';
             html += `</div>`;
             
             container.innerHTML = html;
@@ -813,7 +866,7 @@
                     return;
                 }
                 const filtered = appStoreInventory.filter(a => a.name.toLowerCase().includes(term) || (a.developer && a.developer.toLowerCase().includes(term)));
-                grid.innerHTML = filtered.length > 0 ? filtered.map(a => createAppCard(a)).join('') : '<div class="no-apps-message">No results found</div>';
+                grid.innerHTML = filtered.length > 0 ? filtered.map(a => createAppCard(a)).join('') : '<div class="no-apps-message">${t("NO_RESULTS_FOUND")}</div>';
             };
             
             input.addEventListener('input', updateSearch);
@@ -822,12 +875,12 @@
 
         function renderYou(container) {
             let html = `
-                <div class="section-title" style="margin-top: 30px;">Installed Apps</div>
+                <div class="section-title" style="margin-top: 30px;">${t("INSTALLED_APPS")}</div>
                 <div class="app-grid">
             `;
             
             const installedApps = appStoreInventory.filter(a => installedAppsInfo[a.name]);
-            html += installedApps.length > 0 ? installedApps.map(a => createAppCard(a)).join('') : `<div class="no-apps-message" style="grid-column: 1/-1;">No apps installed</div>`;
+            html += installedApps.length > 0 ? installedApps.map(a => createAppCard(a)).join('') : `<div class="no-apps-message" style="grid-column: 1/-1;">${t("NO_APPS_INSTALLED")}</div>`;
             html += `</div>`;
             container.innerHTML = html;
             
@@ -849,17 +902,17 @@
             let buttonHtml = '';
             
             const send = (data) => {
-                const msg = { action: 'callGurasuraisuFunc', functionName: 'sheetMessageToApp', args: [data] };
+                const msg = { action: 'callPolygolFunc', functionName: 'sheetMessageToApp', args: [data] };
                 return `window.parent.postMessage(${JSON.stringify(msg).replace(/"/g, '&quot;')}, '*')`;
             };
 
             if (isInstalled) {
                 if (hasUpdate) {
-                    buttonHtml = `<button class="action-btn update-btn" onclick="${send({action: 'update', id: app.id})}">Update</button>`;
+                    buttonHtml = `<button class="action-btn update-btn" onclick="${send({action: 'update', id: app.id})}">${t("UPDATE")}</button>`;
                 }
-                buttonHtml = `<button class="action-btn uninstall-btn" onclick="${send({action: 'uninstall', name: app.name})}">Uninstall</button>`;
+                buttonHtml = `<button class="action-btn uninstall-btn" onclick="${send({action: 'uninstall', name: app.name})}">${t("UNINSTALL")}</button>`;
             } else {
-                buttonHtml = `<button class="action-btn install-btn" onclick="${send({action: 'install', id: app.id})}">Install</button>`;
+                buttonHtml = `<button class="action-btn install-btn" onclick="${send({action: 'install', id: app.id})}">${t("INSTALL")}</button>`;
             }
 
             const screenshotsHtml = (app.screenshots || []).map(s => `<img src="${s}" class="screenshot">`).join('');
@@ -993,27 +1046,27 @@
                 </html>
             `;
 
-            Gurasuraisu.showSheet({
+            Polygol.showSheet({
                 html: sheetHtml,
                 height: '85%'
             });
         }
         
         function setupSheetListener() {
-            Gurasuraisu.sheet.onMessage((msg) => {
+            Polygol.sheet.onMessage((msg) => {
                 if (msg.action === 'install' || msg.action === 'update') {
                     const app = appStoreInventory.find(a => a.id === msg.id);
                     if (app) {
-                        Gurasuraisu.installApp(app);
+                        Polygol.installApp(app);
                         installedAppsInfo[app.name] = { filesToCache: app.filesToCache };
                         renderView();
-                        Gurasuraisu.closeSheet();
+                        Polygol.closeSheet();
                     }
                 } else if (msg.action === 'uninstall') {
-                    Gurasuraisu.deleteApp(msg.name);
+                    Polygol.deleteApp(msg.name);
                     delete installedAppsInfo[msg.name];
                     renderView();
-                    Gurasuraisu.closeSheet();
+                    Polygol.closeSheet();
                 }
             });
         }
@@ -1049,7 +1102,7 @@
     
         function onApiReady() {
             // Register all widgets the app provides as soon as the API is ready.
-            Gurasuraisu.registerWidget({
+            Polygol.registerWidget({
                 appName: 'kirbStore',
                 widgetId: 'kirbstore-random-app',
                 title: 'Random App',
@@ -1059,16 +1112,16 @@
             });
 
             setupSheetListener();
-            Gurasuraisu.requestInstalledApps();
+            Polygol.requestInstalledApps();
             loadAllInventories();
         }
 
         // Check if the API script has already loaded and fired its event
-        if (window.Gurasuraisu) {
+        if (window.Polygol) {
             onApiReady();
         } else {
-            // Otherwise, wait for the custom event from gurasuraisu-api.js
-            window.addEventListener('GurasuraisuReady', onApiReady);
+            // Otherwise, wait for the custom event from polygol-api.js
+            window.addEventListener('PolygolReady', onApiReady);
         }
     </script>
 </body>
