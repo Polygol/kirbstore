@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../lang.js">
+    <script src="../lang.js"></script>
+    <script>
         // --- Internationalization (i18n) Support ---
         function getAppLanguage() {
             let l = (localStorage.getItem('language') || localStorage.getItem('selectedLanguage') || 'EN').toUpperCase();
@@ -44,9 +45,6 @@
                 const k = el.getAttribute('data-lang-title');
                 if (k) el.title = t(k);
             });
-            if (typeof onLanguageChanged === 'function') {
-                onLanguageChanged(lang);
-            }
         }
 
         window.addEventListener('message', (e) => {
@@ -55,9 +53,13 @@
             }
         });
 
-        window.addEventListener('DOMContentLoaded', () => applyLanguage());
-        
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'language' || e.key === 'selectedLanguage') {
+                applyLanguage(e.newValue);
+            }
+        });
 
+        window.addEventListener('DOMContentLoaded', () => applyLanguage());
     </script>
     <title>Random App</title>
     <script src="https://cdn.jsdelivr.net/gh/Polygol/polygol.github.io@main/assets/polygolapp/api/polygol-api.js"></script>

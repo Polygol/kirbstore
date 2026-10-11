@@ -1,4 +1,4 @@
-const LANG_EN_KIRBSTORE = {
+window.LANG_EN_KIRBSTORE = {
     TITLE: "kirbStore",
     HOME: "Home",
     TODAY: "Today",
@@ -25,10 +25,14 @@ const LANG_EN_KIRBSTORE = {
     UNINSTALL: "Uninstall",
     INSTALL: "Install",
     NO_DESCRIPTION: "No description available",
-    DEFAULT_PRIVACY: "This app may collect personal and/or analytical data."
+    DEFAULT_PRIVACY: "This app may collect personal and/or analytical data.",
+    STORE_ADDED: "Store added successfully",
+    STORE_LOAD_ERROR: "Error loading store: {url}",
+    ADD_EXTERNAL_STORE: "Add External Repository",
+    UNVERIFIED_STORE_WARNING: "Using an unverified external Store is at your own risk. It is recommended to only use verified stores.",
 };
 
-const LANG_JP_KIRBSTORE = {
+window.LANG_JP_KIRBSTORE = {
     TITLE: "kirbStore",
     HOME: "ホーム",
     TODAY: "今日",
@@ -55,10 +59,14 @@ const LANG_JP_KIRBSTORE = {
     UNINSTALL: "アンインストール",
     INSTALL: "インストール",
     NO_DESCRIPTION: "説明はありません",
-    DEFAULT_PRIVACY: "このアプリは個人データや分析データを収集する場合があります。"
+    DEFAULT_PRIVACY: "このアプリは個人データや分析データを収集する場合があります。",
+    STORE_ADDED: "ストアが正常に追加されました",
+    STORE_LOAD_ERROR: "ストアの読み込みエラー: {url}",
+    ADD_EXTERNAL_STORE: "外部リポジトリを追加",
+    UNVERIFIED_STORE_WARNING: "未確認の外部ストアの使用は自己責任となります。検証済みストアのみを使用することをお勧めします。",
 };
 
-const LANG_KO_KIRBSTORE = {
+window.LANG_KO_KIRBSTORE = {
     TITLE: "kirbStore",
     HOME: "홈",
     TODAY: "오늘",
@@ -85,10 +93,14 @@ const LANG_KO_KIRBSTORE = {
     UNINSTALL: "제거",
     INSTALL: "설치",
     NO_DESCRIPTION: "설명 없음",
-    DEFAULT_PRIVACY: "이 앱은 개인 및 분석 데이터를 수집할 수 있습니다."
+    DEFAULT_PRIVACY: "이 앱은 개인 및 분석 데이터를 수집할 수 있습니다.",
+    STORE_ADDED: "스토어가 성공적으로 추가되었습니다",
+    STORE_LOAD_ERROR: "스토어 로드 오류: {url}",
+    ADD_EXTERNAL_STORE: "외부 저장소 추가",
+    UNVERIFIED_STORE_WARNING: "확인되지 않은 외부 스토어 사용에 따른 위험은 사용자 본인에게 있습니다. 검증된 스토어만 사용하는 것이 좋습니다.",
 };
 
-const LANG_ZH_KIRBSTORE = {
+window.LANG_ZH_KIRBSTORE = {
     TITLE: "kirbStore",
     HOME: "主页",
     TODAY: "今天",
@@ -115,5 +127,14 @@ const LANG_ZH_KIRBSTORE = {
     UNINSTALL: "卸载",
     INSTALL: "安装",
     NO_DESCRIPTION: "暂无描述",
-    DEFAULT_PRIVACY: "此应用可能会收集个人和/或分析数据。"
+    DEFAULT_PRIVACY: "此应用可能会收集个人和/或分析数据。",
+    STORE_ADDED: "应用源添加成功",
+    STORE_LOAD_ERROR: "加载应用源出错: {url}",
+    ADD_EXTERNAL_STORE: "添加第三方应用源",
+    UNVERIFIED_STORE_WARNING: "使用未经认证的第三方应用源需自行承担风险，建议仅使用经过认证的应用源。",
 };
+
+var LANG_EN_KIRBSTORE = window.LANG_EN_KIRBSTORE;
+var LANG_JP_KIRBSTORE = window.LANG_JP_KIRBSTORE;
+var LANG_KO_KIRBSTORE = window.LANG_KO_KIRBSTORE;
+var LANG_ZH_KIRBSTORE = window.LANG_ZH_KIRBSTORE;

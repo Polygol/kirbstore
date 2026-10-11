@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <script src="lang.js">
+    <script src="lang.js"></script>
+    <script>
+        function onLanguageChanged(lang) {
+            if (typeof renderView === 'function') {
+                renderView();
+            }
+        }
+
         // --- Internationalization (i18n) Support ---
         function getAppLanguage() {
             let l = (localStorage.getItem('language') || localStorage.getItem('selectedLanguage') || 'EN').toUpperCase();
@@ -55,9 +62,13 @@
             }
         });
 
-        window.addEventListener('DOMContentLoaded', () => applyLanguage());
-        
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'language' || e.key === 'selectedLanguage') {
+                applyLanguage(e.newValue);
+            }
+        });
 
+        window.addEventListener('DOMContentLoaded', () => applyLanguage());
     </script>
     <title data-lang-key="TITLE">kirbStore only works with Polygol.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -513,11 +524,11 @@
     <div class="create-modal" id="addStoreModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" data-lang-key="ADD_STORE_TITLE">Add External Repository</h2>
+                <h2 class="modal-title" data-lang-key="ADD_STORE_TITLE" data-lang-key="ADD_EXTERNAL_STORE">Add External Repository</h2>
             </div>
             <div style="margin-bottom: 20px;">Using an unverified external Store is at your own risk. It is recommended to only use kirbIndustries <a href="https://kirbindustries.gitbook.io/polygol/polygolapps/verified-external-app-stores" target="_blank">verified stores</a>.</div>
             <div class="form-group">
-                <label class="form-label">Store URL</label>
+                <label class="form-label" data-lang-key="STORE_URL_LABEL">Store URL</label>
                 <input type="url" class="form-input" id="storeUrlInput" data-lang-placeholder="ADD_STORE_URL_PLACEHOLDER" placeholder="Add a valid Polygol Store inventory URL" required>
             </div>
             <button class="submit-btn" id="submitStore" data-lang-key="ADD_STORE_BTN">Add Store</button>
@@ -538,8 +549,7 @@
         let recommendations = { homeFeatured: [], editorsPicks: [], stories:[] };
     
         let storeSources = JSON.parse(localStorage.getItem('appStoreSources')) || [
-            "https://polygol.github.io/kirbstore/inventories/default/inventory.json",
-            "https://polygol.github.io/glucose-polygolapps/inventory.json"
+            "https://polygol.github.io/kirbstore/inventories/default/inventory.json"
         ];
 
         function shuffleArray(array) {
@@ -565,7 +575,7 @@
                 storeUrlInput.value = '';
                 addStoreModal.classList.remove('show');
                 if (window.Polygol) {
-                    Polygol.showPopup('Store added successfully');
+                    Polygol.showPopup(t('STORE_ADDED'));
                 }
             }
         });
@@ -589,7 +599,7 @@
             } catch (error) {
                 console.error(`Failed to fetch or parse inventory from ${url}:`, error);
                 if (window.Polygol) {
-                    Polygol.showPopup(`Error loading store: ${url}`);
+                    Polygol.showPopup(t("STORE_LOAD_ERROR", { url: url }));
                 }
                 return [];
             }
@@ -826,14 +836,14 @@
             const categories =['All', ...new Set(appStoreInventory.map(a => a.category))].filter(Boolean);
             let html = `<div class="category-filter">`;
             categories.forEach(cat => {
-                html += `<button class="category-btn ${currentCategory === cat ? 'active' : ''}" data-category="${cat}">${cat}</button>`;
+                html += `<button class="category-btn ${currentCategory === cat ? 'active' : ''}" data-category="${cat}">${cat === "All" ? t("ALL") : cat}</button>`;
             });
             html += `</div><div class="app-grid" id="appsViewGrid">`;
             
             let appsToRender = appStoreInventory;
             if (currentCategory !== 'All') appsToRender = appsToRender.filter(a => a.category === currentCategory);
             
-            html += appsToRender.length > 0 ? appsToRender.map(a => createAppCard(a)).join('') : '<div class="no-apps-message">${t("NO_APPS_FOUND")}</div>';
+            html += appsToRender.length > 0 ? appsToRender.map(a => createAppCard(a)).join('') : `<div class="no-apps-message">${t("NO_APPS_FOUND")}</div>`;
             html += `</div>`;
             
             container.innerHTML = html;
@@ -850,7 +860,7 @@
             let html = `
                 <div class="search-container" style="position: fixed; width: 90%; z-index: 1; left: 50%; transform: translateX(-50%);">
                     <span class="material-symbols-rounded search-icon" style="padding-left: 2px;">search</span>
-                    <input type="text" id="searchInput" placeholder="Search apps, games, categories and more" class="library-search-input">
+                    <input type="text" id="searchInput" placeholder="${t('SEARCH_PLACEHOLDER')}" class="library-search-input">
                 </div>
                 <div class="app-grid" id="searchGrid" style="padding-top: 60px;"></div>
             `;
@@ -866,7 +876,7 @@
                     return;
                 }
                 const filtered = appStoreInventory.filter(a => a.name.toLowerCase().includes(term) || (a.developer && a.developer.toLowerCase().includes(term)));
-                grid.innerHTML = filtered.length > 0 ? filtered.map(a => createAppCard(a)).join('') : '<div class="no-apps-message">${t("NO_RESULTS_FOUND")}</div>';
+                grid.innerHTML = filtered.length > 0 ? filtered.map(a => createAppCard(a)).join('') : `<div class="no-apps-message">${t("NO_RESULTS_FOUND")}</div>`;
             };
             
             input.addEventListener('input', updateSearch);
@@ -916,8 +926,8 @@
             }
 
             const screenshotsHtml = (app.screenshots || []).map(s => `<img src="${s}" class="screenshot">`).join('');
-            const descHtml = app.description || 'No description available';
-            const privacyHtml = app.privacy || 'This app may collect personal and/or analytical data.';
+            const descHtml = app.description || t('NO_DESCRIPTION');
+            const privacyHtml = app.privacy || t('DEFAULT_PRIVACY');
 
             const sheetHtml = `
                 <!DOCTYPE html>
